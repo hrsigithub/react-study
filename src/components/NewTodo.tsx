@@ -1,6 +1,11 @@
 import React from 'react'
 
-const NewTodo = (props: any) => {
+const NewTodo = (props: {
+  handleEdit: (id: number, inputValue: string) => void
+  handleChecked: (id: number, checked: boolean) => void
+  handleDelete: (id: number) => void
+  todo: any
+}) => {
   return (
     <>
       <input
