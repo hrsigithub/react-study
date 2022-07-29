@@ -1,10 +1,12 @@
 import React from 'react'
 
+import Todo from './types'
+
 const NewTodo = (props: {
   handleEdit: (id: number, inputValue: string) => void
   handleChecked: (id: number, checked: boolean) => void
   handleDelete: (id: number) => void
-  todo: any
+  todo: Todo
 }) => {
   return (
     <>

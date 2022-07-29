@@ -2,17 +2,13 @@ import React, { useState } from 'react'
 import './App.css'
 import NewTodo from './components/NewTodo'
 import TodoInputText from './components/TodoInputText'
+import { TodoList } from './components/TodoList'
+import Todo from './components/types'
 
 function App() {
   const [inputText, setInputText] = useState('')
   //todo配列オブジェクトの更新用に用意。プロパティはinputValue, id, checkedの３つを更新する。
   const [todos, setTodos] = useState<Todo[]>([])
-
-  type Todo = {
-    inputValue: string
-    id: number //keyを指定するため
-    checked: boolean
-  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault()
@@ -92,36 +88,18 @@ function App() {
       <div>
         <h2>Todoリスト with Typescript</h2>
         <form onSubmit={(e) => handleSubmit(e)}>
-          {/* <input type="text" onChange={(e) => handleChange(e)} className="inputText" />
-          <input type="submit" value="作成" className="submitButton" /> */}
-
           <TodoInputText handleChange={handleChange} />
         </form>
+
         {/* タスク設定が完了したら */}
-        <ul className="todoList">
-          {todos.map((todo) => (
-            <li key={todo.id}>
-              {/* <input
-                type="text"
-                value={todo.inputValue}
-                onChange={(e) => handleEdit(todo.id, e.target.value)}
-                disabled={todo.checked}
-              />
-              <input
-                type="checkbox"
-                checked={todo.checked}
-                onChange={() => handleChecked(todo.id, todo.checked)}
-              />
-              <button onClick={() => handleDelete(todo.id)}>消</button> */}
-              <NewTodo
-                todo={todo}
-                handleEdit={handleEdit}
-                handleChecked={handleChecked}
-                handleDelete={handleDelete}
-              ></NewTodo>
-            </li>
-          ))}
-        </ul>
+
+        <TodoList 
+          handleEdit={handleEdit}
+          handleChecked={handleChecked}
+          handleDelete={handleDelete}
+          todos={todos}
+        />
+
       </div>
     </div>
   )
