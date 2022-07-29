@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './App.css'
+import Home from './components/Home'
 import NewTodo from './components/NewTodo'
 import TodoInputText from './components/TodoInputText'
 import { TodoList } from './components/TodoList'
@@ -86,20 +87,23 @@ function App() {
   return (
     <div className="App">
       <div>
+        <h2>Firebase ログイン</h2>
+        <Home />
+
         <h2>Todoリスト with Typescript</h2>
+        <hr />
         <form onSubmit={(e) => handleSubmit(e)}>
           <TodoInputText handleChange={handleChange} />
         </form>
 
         {/* タスク設定が完了したら */}
 
-        <TodoList 
+        <TodoList
           handleEdit={handleEdit}
           handleChecked={handleChecked}
           handleDelete={handleDelete}
           todos={todos}
         />
-
       </div>
     </div>
   )
