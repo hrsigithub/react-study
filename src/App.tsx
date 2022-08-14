@@ -2,8 +2,10 @@ import axios from 'axios'
 import { api } from './api'
 import React, { useState } from 'react'
 import './App.css'
-import { Counter } from './components/Counter'
 import AxiosResReqType from './components/AxiosResReqType'
+
+import { Counter, NewTodo, Todo } from './components/index'
+
 
 const getPosts = async () => {
   const posts = api.get('/posts')

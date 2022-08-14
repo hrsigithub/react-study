@@ -10,7 +10,7 @@ function init() {
   return 7
 }
 
-export const Counter = () => {
+const Counter = () => {
   // init() は再描画するたびに走る。
   // const [counter, setCounter] = useState(init())
 
@@ -40,3 +40,6 @@ export const Counter = () => {
     </div>
   )
 }
+
+export default Counter
+

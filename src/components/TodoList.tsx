@@ -1,9 +1,8 @@
 import React from 'react'
 
-import NewTodo from './NewTodo'
-import Todo from './types'
+import { NewTodo, Todo } from './index'
 
-export const TodoList = (props: any) => {
+const TodoList = (props: any) => {
   return (
     <ul className="todoList">
       {props.todos.map((todo: Todo) => (
@@ -19,3 +18,5 @@ export const TodoList = (props: any) => {
     </ul>
   )
 }
+
+export default TodoList

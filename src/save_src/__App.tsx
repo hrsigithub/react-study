@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 // import './App.css'
 import Home from '../components/Home'
-import TodoInputText from '../components/TodoInputText'
-import { TodoList } from '../components/TodoList'
-import Todo from '../components/types'
+
+import { Counter, NewTodo, Todo, TodoList, TodoInputText } from '../components/index'
+
 
 function __App() {
   const [inputText, setInputText] = useState('')
