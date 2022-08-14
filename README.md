@@ -44,3 +44,30 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+## 勉強メモ
+
+### 疑問点
+
+* export defalt とは何者か？
+* import {} 有りと無しの違いは？
+
+参考
+https://prograshi.com/language/javascript/export-default-and-export/
+
+export defalt はひとつ
+
+export defalt では
+import xx from zz になる。
+
+export { xxx }
+では
+import { xxx } になる。
+-------------
+axios 関連
+
+参考
+
+https://zenn.dev/mkt_engr/articles/axios-req-res-typescript
+　
